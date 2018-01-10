@@ -60,7 +60,7 @@ abstract class Enum
         $constants = self::getClassConstants(static::class);
 
         return isset($constants[$searchName])
-            || ($caseInsensitive && null !== $key = self::searchArrayCaseInsensitive($constants, $searchName));
+            || ($caseInsensitive && null !== self::searchArrayCaseInsensitive($constants, $searchName));
     }
 
     /**
